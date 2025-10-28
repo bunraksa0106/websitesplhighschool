@@ -12,7 +12,7 @@
         <img class="w-24 h-24 rounded-full " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPZYtCyeSHTNvuYZRUbrlbW7_1JyOJ_KwljrkAqfXBwQ&s" alt="">
         <p class="text-2xl">វិទ្យាល័យ សំរោងពន្លៃ</p>
     </div>
-    <div id="head" class="w-full h-12 bg-blue-500 flex items-center justify-between text-white font-bold p-2">
+    <div id="head" scollY() class="w-full h-12 bg-blue-500 flex items-center justify-between text-white font-bold p-2">
         <ul class="flex items-center  text-center space-x-4">
             <li><a href="#" class="hover:text-gray-800">Home</a></li>
             <li><a href="#"class="hover:text-gray-800" >About us</a></li>
@@ -33,35 +33,36 @@
             <img class="w-[400px] h-[350px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILiPbO9SaL1jEcvCje-H9YopcFPrEppq1J9vps2UhZTh2u_LA6-UjhxdrzVpB0zizkfM&usqp=CAU" alt="">
         </div>
         <p class="text-center font-bold m-2">About us</p>
+        <div class="w-48 h-64 bg-white  "></div>
     <script>
         const head=document.getElementById('head');
         window.scroll=function ScrollY(){
             head.style.position='fixed';
             head.style.marginTop="0";
         };
-        const gallery = document.getElementById('image-gallery');
-    let lastScrollTop = 0; // Tracks the previous scroll position
-    const threshold = 50;  // Number of pixels to scroll before hiding/showing
+    //     const gallery = document.getElementById('image-gallery');
+    // let lastScrollTop = 0; // Tracks the previous scroll position
+    // const threshold = 50;  // Number of pixels to scroll before hiding/showing
 
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // window.addEventListener('scroll', function() {
+    //     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        // 1. Check if the user is scrolling DOWN
-        if (scrollTop > lastScrollTop && scrollTop > threshold) {
-            // User is scrolling down: HIDE the gallery
-            gallery.classList.add('transform', '-translate-y-full'); // Slides it up out of view
-            gallery.classList.add('opacity-0');                      // Fades it out
-        } 
+    //     // 1. Check if the user is scrolling DOWN
+    //     if (scrollTop > lastScrollTop && scrollTop > threshold) {
+    //         // User is scrolling down: HIDE the gallery
+    //         gallery.classList.add('transform', '-translate-y-full'); // Slides it up out of view
+    //         gallery.classList.add('opacity-0');                      // Fades it out
+    //     } 
         
-        // 2. Check if the user is scrolling UP or near the very top
-        else if (scrollTop < lastScrollTop || scrollTop < threshold) {
-            // User is scrolling up: SHOW the gallery
-            gallery.classList.remove('transform', '-translate-y-full'); // Slides it back down
-            gallery.classList.remove('opacity-0');                      // Fades it in
-        }
+    //     // 2. Check if the user is scrolling UP or near the very top
+    //     else if (scrollTop < lastScrollTop || scrollTop < threshold) {
+    //         // User is scrolling up: SHOW the gallery
+    //         gallery.classList.remove('transform', '-translate-y-full'); // Slides it back down
+    //         gallery.classList.remove('opacity-0');                      // Fades it in
+    //     }
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile/safari bounce
-    });
+    //     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile/safari bounce
+    // });
     </script>
 </body>
 </html>
