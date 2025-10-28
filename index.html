@@ -8,11 +8,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 ">
-    <div id="hidee" class="m-2 w-full h-32​ flex bg-white items-center space-x-6">
+    <div class="" id="head">
+        <div id="" class=" w-full h-32​ flex bg-white items-center space-x-6">
         <img class="w-24 h-24 rounded-full " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPZYtCyeSHTNvuYZRUbrlbW7_1JyOJ_KwljrkAqfXBwQ&s" alt="">
         <p class="text-2xl">វិទ្យាល័យ សំរោងពន្លៃ</p>
     </div>
-    <div id="head" scollY() class="w-full h-12 bg-blue-500 flex items-center justify-between text-white font-bold p-2">
+    <div  class="w-full h-12 bg-blue-500 flex items-center justify-between text-white font-bold">
         <ul class="flex items-center  text-center space-x-4">
             <li><a href="#" class="hover:text-gray-800">Home</a></li>
             <li><a href="#"class="hover:text-gray-800" >About us</a></li>
@@ -23,6 +24,8 @@
             <button class="hover:bg-gray-200 w-24 h-8  bg-white text-gray-800 rounded-lg">Register</button>
             <i class="fa-solid fa-list hover:cursor-pointer"></i>
         </div>
+    </div>
+    
 
     </div>
         <div id="image-gallery" class="overflow-y-scroll hide-scrollbar items-center justify-center flex space-x-4 overflow-x-auto overflow-hidden p-2">
@@ -36,22 +39,15 @@
         <p class="text-center font-bold m-2">About us</p>
         <div class="w-48 h-64 bg-white  "></div>
     <script>
-              const head = document.getElementById('head');
+    const head = document.getElementById('head');
       window.addEventListener('scroll', function () {
         if (window.pageYOffset >= 0&&head) {
           head.style.position = 'fixed';
-          head.style.top = '102px';
+          head.style.top = '0';
           head.style.width = '100%';
         }
       });
-      const hidee=document.getElementById("hidee");
-      window.addEventListener('scroll', function () {
-        if (window.pageYOffset >= 0&&hidee) {
-          hidee.style.position = 'fixed';
-          hidee.style.top = '0';
-          hidee.style.width = '100%';
-        }
-      });
+      
     </script>
 </body>
 </html>
